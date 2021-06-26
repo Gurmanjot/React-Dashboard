@@ -19,7 +19,7 @@ const list = [
 ];
 const Sidebar = () => {
   return (
-    <div className="w-64 bg-white overflow-y-auto">
+    <div className="w-64 bg-white overflow-y-auto md:no-scrollbar">
       <img src={logo} alt="logo" className="mx-auto mt-3" />
       <div className="p-4">
         {list.map(({ icon, text }, index) => (
