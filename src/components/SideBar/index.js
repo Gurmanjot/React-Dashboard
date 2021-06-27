@@ -17,9 +17,13 @@ const list = [
   { icon: SwitchHorizontalIcon, text: "Transaction" },
   { icon: CogIcon, text: "Settings" },
 ];
-const Sidebar = () => {
+const Sidebar = ({ sidebar, setSidebar }) => {
   return (
-    <div className="w-64 bg-white overflow-y-auto md:no-scrollbar">
+    <div
+      className={`w-60 h-full relative top:0 bottom-0 left-0 bg-white overflow-y-auto md:no-scrollbar transform -translate-x-full md:translate-x-0  ${
+        sidebar ? "translate-x-0" : "-translate-x-full"
+      } transition duration-200 ease-in-out`}
+    >
       <img src={logo} alt="logo" className="mx-auto mt-3" />
       <div className="p-4">
         {list.map(({ icon, text }, index) => (
