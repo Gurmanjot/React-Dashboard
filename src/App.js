@@ -3,6 +3,9 @@ import Sidebar from "./components/SideBar";
 import Header from "./components/Header";
 import { useState } from "react";
 import BalanceCard from "./components/Cards/BalanceCard";
+import IncomeExpenseCard from "./components/Cards/IncomeExpenseCard";
+import Income from "./assets/images/IncomeIcon.png";
+import Expense from "./assets/images/ExpenseIcon.png";
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -14,9 +17,8 @@ function App() {
         {/* cards */}
         <div className="grid grid-cols-12 gap-6 p-8">
           <BalanceCard />
-          <BalanceCard />
-          <BalanceCard />
-          <BalanceCard />
+          <IncomeExpenseCard logo={Income} isIncome={true} />
+          <IncomeExpenseCard logo={Expense} isIncome={false} />
         </div>
       </div>
     </div>
